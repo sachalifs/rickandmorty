@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
-export type Maybe<T> = T | undefined;
+export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
@@ -23,7 +23,7 @@ export enum CacheControlScope {
 }
 
 export type Character = {
-  __typename: 'Character';
+  __typename?: 'Character';
   /** The id of the character. */
   id?: Maybe<Scalars['ID']>;
   /** The name of the character. */
@@ -52,13 +52,13 @@ export type Character = {
 };
 
 export type Characters = {
-  __typename: 'Characters';
+  __typename?: 'Characters';
   info?: Maybe<Info>;
   results?: Maybe<Array<Maybe<Character>>>;
 };
 
 export type Episode = {
-  __typename: 'Episode';
+  __typename?: 'Episode';
   /** The id of the episode. */
   id?: Maybe<Scalars['ID']>;
   /** The name of the episode. */
@@ -74,7 +74,7 @@ export type Episode = {
 };
 
 export type Episodes = {
-  __typename: 'Episodes';
+  __typename?: 'Episodes';
   info?: Maybe<Info>;
   results?: Maybe<Array<Maybe<Episode>>>;
 };
@@ -99,7 +99,7 @@ export type FilterLocation = {
 };
 
 export type Info = {
-  __typename: 'Info';
+  __typename?: 'Info';
   /** The length of the response. */
   count?: Maybe<Scalars['Int']>;
   /** The amount of pages. */
@@ -111,7 +111,7 @@ export type Info = {
 };
 
 export type Location = {
-  __typename: 'Location';
+  __typename?: 'Location';
   /** The id of the location. */
   id?: Maybe<Scalars['ID']>;
   /** The name of the location. */
@@ -127,13 +127,13 @@ export type Location = {
 };
 
 export type Locations = {
-  __typename: 'Locations';
+  __typename?: 'Locations';
   info?: Maybe<Info>;
   results?: Maybe<Array<Maybe<Location>>>;
 };
 
 export type Query = {
-  __typename: 'Query';
+  __typename?: 'Query';
   /** Get a specific character by ID */
   character?: Maybe<Character>;
   /** Get the list of all characters */
@@ -209,24 +209,24 @@ export type GetCharactersQueryVariables = Exact<{
 
 
 export type GetCharactersQuery = (
-  { __typename: 'Query' }
+  { __typename?: 'Query' }
   & { characters?: Maybe<(
-    { __typename: 'Characters' }
+    { __typename?: 'Characters' }
     & { results?: Maybe<Array<Maybe<(
-      { __typename: 'Character' }
+      { __typename?: 'Character' }
       & CharacterFragment
     )>>> }
   )> }
 );
 
 export type CharacterFragment = (
-  { __typename: 'Character' }
+  { __typename?: 'Character' }
   & Pick<Character, 'id' | 'image' | 'name' | 'species' | 'status'>
   & { location?: Maybe<(
-    { __typename: 'Location' }
+    { __typename?: 'Location' }
     & Pick<Location, 'id' | 'name'>
   )>, episode?: Maybe<Array<Maybe<(
-    { __typename: 'Episode' }
+    { __typename?: 'Episode' }
     & Pick<Episode, 'id' | 'name'>
   )>>> }
 );
