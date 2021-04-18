@@ -41,7 +41,7 @@ const Typography: FC<Props> = ({
   color: fontColor,
   children
 }) => {
-  const Element = variant === 'heading' ? 'h2' : 'span'
+  const Element = variant === 'heading' ? 'h3' : 'span'
   const fontSize = SizesInPx[size]
   const fontWeight = FontWeights[variant]
   const color = FontColors[fontColor]

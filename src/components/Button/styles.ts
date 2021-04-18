@@ -8,7 +8,9 @@ export const StyledButton = styled.button`
   min-width: 128px;
   height: 40px;
   font-weight: 800;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 `

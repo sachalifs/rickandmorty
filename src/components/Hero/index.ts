@@ -1,1 +1,1 @@
-export { Hero } from './styles'
+export { Hero, Title, Subtitle } from './styles'

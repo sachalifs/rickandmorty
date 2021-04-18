@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { CharactersList, Hero, Button } from './components'
+import { useEffect, useState } from 'react'
+import { CharactersList, Hero, Title, Subtitle, Button } from './components'
 import { CharacterFragment, useGetCharactersLazyQuery } from './graphql'
 
+const capitalize = (str: string) =>
+  str.length === 0 ? '' : str[0].toUpperCase() + str.slice(1).toLowerCase()
+
 const EMPTY_CHARACTERS: CharacterFragment[] = []
-const INITIAL_PAGE = 1
+const INITIAL_PAGE = 0
 
 export const AppContent = () => {
   const [page, setPage] = useState(INITIAL_PAGE)
@@ -15,7 +18,10 @@ export const AppContent = () => {
       setPage(page + 1)
       setCharacters([
         ...characters,
-        ...(data?.characters?.results! as CharacterFragment[])
+        ...(data?.characters?.results!.map((character) => ({
+          ...character,
+          status: capitalize(character?.status!)
+        })) as CharacterFragment[])
       ])
     }
   })
@@ -32,7 +38,10 @@ export const AppContent = () => {
 
   return (
     <>
-      <Hero>Rick & Morty</Hero>
+      <Hero>
+        <Title>Rick & Morty</Title>
+        <Subtitle>👨🏻‍🍳 en La Cocina del Código</Subtitle>
+      </Hero>
       <CharactersList characters={characters} />
       <div
         style={{
