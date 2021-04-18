@@ -1,0 +1,30 @@
+query getCharacters {
+  characters(page: 0) {
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin {
+        id
+        name
+      }
+      location {
+        id
+        name
+        type
+        dimension
+        created
+      }
+      image
+      episode {
+        id
+        episode
+        air_date
+      }
+      created
+    }
+  }
+}
