@@ -1,9 +1,15 @@
 overwrite: true
-schema: "https://rickandmortyapi.com/graphql"
-documents: "src/documents/*.graphql"
+schema: 'https://rickandmortyapi.com/graphql'
+documents: 'src/documents/**/*.graphql'
+config:
+  withComponent: false
+  withHooks: true
+  withHOC: false
+  maybeValue: T | undefined
+  nonOptionalTypename: true
 generates:
   src/graphql/index.tsx:
     plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-apollo"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
