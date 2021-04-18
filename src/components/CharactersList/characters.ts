@@ -3,7 +3,7 @@ const characters = [
     id: '1',
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
     name: 'Rick Sanchez',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '20',
@@ -180,7 +180,7 @@ const characters = [
     id: '2',
     image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
     name: 'Morty Smith',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '20',
@@ -357,7 +357,7 @@ const characters = [
     id: '3',
     image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
     name: 'Summer Smith',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '20',
@@ -502,7 +502,7 @@ const characters = [
     id: '4',
     image: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
     name: 'Beth Smith',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '20',
@@ -647,7 +647,7 @@ const characters = [
     id: '5',
     image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
     name: 'Jerry Smith',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '20',
@@ -776,7 +776,7 @@ const characters = [
     id: '6',
     image: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
     name: 'Abadango Cluster Princess',
-    type: '',
+    species: 'Alien',
     status: 'Alive',
     location: {
       id: '2',
@@ -793,7 +793,7 @@ const characters = [
     id: '7',
     image: 'https://rickandmortyapi.com/api/character/avatar/7.jpeg',
     name: 'Abradolf Lincler',
-    type: 'Genetic experiment',
+    species: 'Human',
     status: 'unknown',
     location: {
       id: '21',
@@ -814,7 +814,7 @@ const characters = [
     id: '8',
     image: 'https://rickandmortyapi.com/api/character/avatar/8.jpeg',
     name: 'Adjudicator Rick',
-    type: '',
+    species: 'Human',
     status: 'Dead',
     location: {
       id: '3',
@@ -831,7 +831,7 @@ const characters = [
     id: '9',
     image: 'https://rickandmortyapi.com/api/character/avatar/9.jpeg',
     name: 'Agency Director',
-    type: '',
+    species: 'Human',
     status: 'Dead',
     location: {
       id: '20',
@@ -848,7 +848,7 @@ const characters = [
     id: '10',
     image: 'https://rickandmortyapi.com/api/character/avatar/10.jpeg',
     name: 'Alan Rails',
-    type: 'Superhuman (Ghost trains summoner)',
+    species: 'Human',
     status: 'Dead',
     location: {
       id: '4',
@@ -865,7 +865,7 @@ const characters = [
     id: '11',
     image: 'https://rickandmortyapi.com/api/character/avatar/11.jpeg',
     name: 'Albert Einstein',
-    type: '',
+    species: 'Human',
     status: 'Dead',
     location: {
       id: '20',
@@ -882,7 +882,7 @@ const characters = [
     id: '12',
     image: 'https://rickandmortyapi.com/api/character/avatar/12.jpeg',
     name: 'Alexander',
-    type: '',
+    species: 'Human',
     status: 'Dead',
     location: {
       id: '5',
@@ -899,7 +899,7 @@ const characters = [
     id: '13',
     image: 'https://rickandmortyapi.com/api/character/avatar/13.jpeg',
     name: 'Alien Googah',
-    type: '',
+    species: 'Alien',
     status: 'unknown',
     location: {
       id: '20',
@@ -916,7 +916,7 @@ const characters = [
     id: '14',
     image: 'https://rickandmortyapi.com/api/character/avatar/14.jpeg',
     name: 'Alien Morty',
-    type: '',
+    species: 'Alien',
     status: 'unknown',
     location: {
       id: '3',
@@ -933,7 +933,7 @@ const characters = [
     id: '15',
     image: 'https://rickandmortyapi.com/api/character/avatar/15.jpeg',
     name: 'Alien Rick',
-    type: '',
+    species: 'Alien',
     status: 'unknown',
     location: {
       id: '3',
@@ -950,7 +950,7 @@ const characters = [
     id: '16',
     image: 'https://rickandmortyapi.com/api/character/avatar/16.jpeg',
     name: 'Amish Cyborg',
-    type: 'Parasite',
+    species: 'Alien',
     status: 'Dead',
     location: {
       id: '20',
@@ -967,7 +967,7 @@ const characters = [
     id: '17',
     image: 'https://rickandmortyapi.com/api/character/avatar/17.jpeg',
     name: 'Annie',
-    type: '',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '5',
@@ -984,7 +984,7 @@ const characters = [
     id: '18',
     image: 'https://rickandmortyapi.com/api/character/avatar/18.jpeg',
     name: 'Antenna Morty',
-    type: 'Human with antennae',
+    species: 'Human',
     status: 'Alive',
     location: {
       id: '3',
@@ -1005,7 +1005,7 @@ const characters = [
     id: '19',
     image: 'https://rickandmortyapi.com/api/character/avatar/19.jpeg',
     name: 'Antenna Rick',
-    type: 'Human with antennae',
+    species: 'Human',
     status: 'unknown',
     location: {
       id: null,
@@ -1022,7 +1022,7 @@ const characters = [
     id: '20',
     image: 'https://rickandmortyapi.com/api/character/avatar/20.jpeg',
     name: 'Ants in my Eyes Johnson',
-    type: 'Human with ants in his eyes',
+    species: 'Human',
     status: 'unknown',
     location: {
       id: '6',

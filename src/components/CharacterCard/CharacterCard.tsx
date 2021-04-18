@@ -15,7 +15,7 @@ type Props = {
   name: string
   image: string
   status: CharacterStatus
-  type: string
+  species: string
   location: string
   firstSeenIn: string
 }
@@ -24,7 +24,7 @@ const CharacterCard: FC<Props> = ({
   name,
   image,
   status,
-  type,
+  species,
   location,
   firstSeenIn
 }) => (
@@ -41,7 +41,7 @@ const CharacterCard: FC<Props> = ({
           <StatusIndicator status={status} />
           {status}
           {' - '}
-          {type}
+          {species}
         </Typography>
       </Section>
       <Section>

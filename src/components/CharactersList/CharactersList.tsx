@@ -11,7 +11,7 @@ const CharactersList = () => (
           key={character.id}
           image={character.image}
           name={character.name}
-          type={character.type}
+          species={character.species}
           location={character.location.name}
           firstSeenIn={character.episode[0].name}
           status={character.status as CharacterStatus}

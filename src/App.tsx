@@ -2,7 +2,7 @@
 // import { ApolloProvider } from '@apollo/client/react'
 // import { CharactersList } from './components/CharactersList'
 
-import { CharactersList } from './components'
+import { CharactersList, Hero } from './components'
 
 // const client = new ApolloClient({
 //   uri: 'https://rickandmortyapi.com/graphql',
@@ -10,7 +10,12 @@ import { CharactersList } from './components'
 // })
 
 function App() {
-  return <CharactersList />
+  return (
+    <>
+      <Hero>Rick & Morty</Hero>
+      <CharactersList />
+    </>
+  )
 }
 
 export default App
