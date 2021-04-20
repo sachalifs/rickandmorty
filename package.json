@@ -21,9 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "svg": "svgo --pretty -f ./src",
-    "update:graphql": "graphql-codegen --config codegen.yml"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -44,14 +42,6 @@
     ]
   },
   "devDependencies": {
-    "@apollo/client": "^3.3.15",
-    "@graphql-codegen/cli": "1.21.3",
-    "@graphql-codegen/typescript": "1.21.1",
-    "@graphql-codegen/typescript-operations": "^1.17.15",
-    "@graphql-codegen/typescript-react-apollo": "^2.2.3",
-    "@types/styled-components": "^5.1.9",
-    "graphql": "^15.5.0",
-    "prettier-standard": "^16.4.1",
-    "svgo": "^2.3.0"
+    "@types/styled-components": "^5.1.9"
   }
 }
