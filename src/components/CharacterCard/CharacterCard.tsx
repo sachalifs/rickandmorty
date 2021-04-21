@@ -1,7 +1,15 @@
 import { FC } from 'react'
+import { CharacterStatus } from '../../types'
 import { Typography } from '../Typography'
 
-import { Card, ContentWrapper, Image, ImageWrapper, Section } from './styles'
+import {
+  Card,
+  ContentWrapper,
+  Image,
+  ImageWrapper,
+  Section,
+  StatusIndicator
+} from './styles'
 
 const CharacterCard: FC = () => (
   <Card>
@@ -17,7 +25,7 @@ const CharacterCard: FC = () => (
           Morty Smith
         </Typography>
         <Typography color='white' size='small'>
-          Alive - Human
+          <StatusIndicator status={CharacterStatus.Alive} /> Alive - Human
         </Typography>
       </Section>
       <Section>
