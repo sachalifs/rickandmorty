@@ -1,17 +1,7 @@
 import { FC } from 'react'
 
-const style = {
-  width: 600,
-  height: 200,
-  margin: 13.5,
-  overflow: 'hidden',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  color: 'white',
-  border: '1px solid white'
-}
+import { Card } from './styles'
 
-const CharacterCard: FC = () => <div style={style}>TO-DO</div>
+const CharacterCard: FC = () => <Card>TO-DO</Card>
 
 export default CharacterCard
