@@ -6,8 +6,6 @@ export const Card = styled.div`
   margin: 13.5px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -23,4 +21,19 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center center;
+`
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex: 3 1 0%;
+  flex-direction: column;
+  padding: 13.5px;
+  background-color: #3c3e43;
+`
+
+export const Section = styled.div`
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: center;
 `
