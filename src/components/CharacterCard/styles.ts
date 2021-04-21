@@ -1,4 +1,11 @@
 import styled from 'styled-components'
+import { CharacterStatus } from '../../types'
+
+const StatusIndicatorColor = {
+  [CharacterStatus.Alive]: '#76c858',
+  [CharacterStatus.Dead]: '#d63d2e',
+  [CharacterStatus.Unknown]: '#9e9e9e'
+}
 
 export const Card = styled.div`
   width: 600px;
@@ -36,4 +43,12 @@ export const Section = styled.div`
   flex: 1 1 0%;
   flex-direction: column;
   justify-content: center;
+`
+
+export const StatusIndicator = styled.span<{ status: CharacterStatus }>`
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background: ${(props) => StatusIndicatorColor[props.status]};
 `
