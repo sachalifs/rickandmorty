@@ -11,21 +11,41 @@ import {
   StatusIndicator
 } from './styles'
 
-const CharacterCard: FC = () => (
+const CharacterStatusName = {
+  [CharacterStatus.Alive]: 'Vivo',
+  [CharacterStatus.Dead]: 'Muerto',
+  [CharacterStatus.Unknown]: 'Desconocido'
+}
+
+type Props = {
+  name: string
+  image: string
+  status: CharacterStatus
+  species: string
+  lastKnownLocation: string
+  firstEpisode: string
+}
+
+const CharacterCard: FC<Props> = ({
+  name,
+  image,
+  status,
+  species,
+  lastKnownLocation,
+  firstEpisode
+}) => (
   <Card>
     <ImageWrapper>
-      <Image
-        src='https://rickandmortyapi.com/api/character/avatar/2.jpeg'
-        alt='Morty Smith'
-      />
+      <Image src={image} alt={name} />
     </ImageWrapper>
     <ContentWrapper>
       <Section>
         <Typography variant='heading' color='white' size='big'>
-          Morty Smith
+          {name}
         </Typography>
         <Typography color='white' size='small'>
-          <StatusIndicator status={CharacterStatus.Alive} /> Alive - Human
+          <StatusIndicator status={status} /> {CharacterStatusName[status]} -{' '}
+          {species}
         </Typography>
       </Section>
       <Section>
@@ -33,7 +53,7 @@ const CharacterCard: FC = () => (
           Última ubicación conocida:
         </Typography>
         <Typography color='white' size='medium'>
-          Story Train
+          {lastKnownLocation}
         </Typography>
       </Section>
       <Section>
@@ -41,7 +61,7 @@ const CharacterCard: FC = () => (
           Primer episodio donde aparece:
         </Typography>
         <Typography color='white' size='medium'>
-          Never Ricking Morty
+          {firstEpisode}
         </Typography>
       </Section>
     </ContentWrapper>
