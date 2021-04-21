@@ -1,4 +1,4 @@
-query getCharacters($page: Int) {
+query getCharacters($page: Int!) {
   characters(page: $page) {
     results {
       ...Character

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   CharactersList,
   Hero,
@@ -7,32 +7,44 @@ import {
   ButtonWrapper,
   Button
 } from './components'
-import api from './api'
+import { CharacterFragment, useGetCharactersLazyQuery } from './graphql'
 
-const EMPTY_CHARACTERS: object[] = []
+const INITIAL_PAGE = 1
+const EMPTY_CHARACTERS: CharacterFragment[] = []
 
 export const AppContent = () => {
+  const [page, setPage] = useState(INITIAL_PAGE)
   const [initialLoad, setInitialLoad] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [characters, setCharacters] = useState<object[]>(EMPTY_CHARACTERS)
+  const [characters, setCharacters] = useState<CharacterFragment[]>(
+    EMPTY_CHARACTERS
+  )
+  const [getCharacters, { loading }] = useGetCharactersLazyQuery({
+    onCompleted: (data) => {
+      setCharacters([
+        ...characters,
+        ...(data.characters?.results! as CharacterFragment[])
+      ])
+      setPage(page + 1)
+    }
+  })
 
   const handleLoadMoreClick = () => {
-    loadCharacters()
+    getCharacters({ variables: { page } })
   }
 
-  const loadCharacters = useCallback(async () => {
-    setLoading(true)
-    const moreCharacters = await api.fetchMoreCharacters()
-    setCharacters([...characters, ...moreCharacters])
-    setLoading(false)
-  }, [characters])
+  // const loadCharacters = useCallback(async () => {
+  //   setLoading(true)
+  //   const moreCharacters = await api.fetchMoreCharacters()
+  //   setCharacters([...characters, ...moreCharacters])
+  //   setLoading(false)
+  // }, [characters])
 
   useEffect(() => {
     if (!initialLoad) {
-      loadCharacters()
+      getCharacters({ variables: { page } })
     }
     setInitialLoad(true)
-  }, [initialLoad, loadCharacters])
+  }, [getCharacters, initialLoad, page])
 
   return (
     <>
