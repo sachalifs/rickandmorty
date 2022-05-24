@@ -10,6 +10,16 @@ En este [mockup](https://www.figma.com/file/olHQvzGD4NOQ8CdaKIlE11/Rick-and-Mort
 
 Si este proyecto te gustó, agregale una estrella con el botón que figura en el header del proyecto.
 
+## Video tutorial
+
+En el canal de [@medellinjs](https://www.youtube.com/c/medellinjs) transmití en vivo un tutorial para construir esta aplicación paso a paso.
+
+Podés verlo [acá](https://www.youtube.com/watch?v=MMYUiR6zNY8) o haciendo click en la imagen:
+
+[![image](https://user-images.githubusercontent.com/1213542/170114734-1e0e0a37-e2b9-4eef-9751-c3d1ff6224d3.png)](https://youtube.com/watch?v=MMYUiR6zNY8)
+
+https://www.youtube.com/watch?v=MMYUiR6zNY8
+
 ## Instalación e inicio de la app
 
 ```
